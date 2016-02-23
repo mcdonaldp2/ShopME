@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCBD81381C7D07DE003AF2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD81371C7D07DE003AF2C4 /* AppDelegate.swift */; };
+		BCBD813A1C7D07DE003AF2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD81391C7D07DE003AF2C4 /* ViewController.swift */; };
+		BCBD813D1C7D07DE003AF2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBD813B1C7D07DE003AF2C4 /* Main.storyboard */; };
+		BCBD81401C7D07DE003AF2C4 /* ShopME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCBD813E1C7D07DE003AF2C4 /* ShopME.xcdatamodeld */; };
+		BCBD81421C7D07DE003AF2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCBD81411C7D07DE003AF2C4 /* Assets.xcassets */; };
+		BCBD81451C7D07DE003AF2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBD81431C7D07DE003AF2C4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BCBD81341C7D07DE003AF2C4 /* ShopME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopME.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBD81371C7D07DE003AF2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCBD81391C7D07DE003AF2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCBD813C1C7D07DE003AF2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCBD813F1C7D07DE003AF2C4 /* ShopME.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShopME.xcdatamodel; sourceTree = "<group>"; };
+		BCBD81411C7D07DE003AF2C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCBD81441C7D07DE003AF2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCBD81461C7D07DE003AF2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCBD81311C7D07DE003AF2C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCBD812B1C7D07DE003AF2C4 = {
+			isa = PBXGroup;
+			children = (
+				BCBD81361C7D07DE003AF2C4 /* ShopME */,
+				BCBD81351C7D07DE003AF2C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCBD81351C7D07DE003AF2C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCBD81341C7D07DE003AF2C4 /* ShopME.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCBD81361C7D07DE003AF2C4 /* ShopME */ = {
+			isa = PBXGroup;
+			children = (
+				BCBD81371C7D07DE003AF2C4 /* AppDelegate.swift */,
+				BCBD81391C7D07DE003AF2C4 /* ViewController.swift */,
+				BCBD813B1C7D07DE003AF2C4 /* Main.storyboard */,
+				BCBD81411C7D07DE003AF2C4 /* Assets.xcassets */,
+				BCBD81431C7D07DE003AF2C4 /* LaunchScreen.storyboard */,
+				BCBD81461C7D07DE003AF2C4 /* Info.plist */,
+				BCBD813E1C7D07DE003AF2C4 /* ShopME.xcdatamodeld */,
+			);
+			path = ShopME;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCBD81331C7D07DE003AF2C4 /* ShopME */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCBD81491C7D07DE003AF2C4 /* Build configuration list for PBXNativeTarget "ShopME" */;
+			buildPhases = (
+				BCBD81301C7D07DE003AF2C4 /* Sources */,
+				BCBD81311C7D07DE003AF2C4 /* Frameworks */,
+				BCBD81321C7D07DE003AF2C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShopME;
+			productName = ShopME;
+			productReference = BCBD81341C7D07DE003AF2C4 /* ShopME.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCBD812C1C7D07DE003AF2C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Paul McDonald ";
+				TargetAttributes = {
+					BCBD81331C7D07DE003AF2C4 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = AHZ77B5EK4;
+					};
+				};
+			};
+			buildConfigurationList = BCBD812F1C7D07DE003AF2C4 /* Build configuration list for PBXProject "ShopME" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCBD812B1C7D07DE003AF2C4;
+			productRefGroup = BCBD81351C7D07DE003AF2C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCBD81331C7D07DE003AF2C4 /* ShopME */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCBD81321C7D07DE003AF2C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBD81451C7D07DE003AF2C4 /* LaunchScreen.storyboard in Resources */,
+				BCBD81421C7D07DE003AF2C4 /* Assets.xcassets in Resources */,
+				BCBD813D1C7D07DE003AF2C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCBD81301C7D07DE003AF2C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBD813A1C7D07DE003AF2C4 /* ViewController.swift in Sources */,
+				BCBD81401C7D07DE003AF2C4 /* ShopME.xcdatamodeld in Sources */,
+				BCBD81381C7D07DE003AF2C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BCBD813B1C7D07DE003AF2C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCBD813C1C7D07DE003AF2C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCBD81431C7D07DE003AF2C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCBD81441C7D07DE003AF2C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCBD81471C7D07DE003AF2C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCBD81481C7D07DE003AF2C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCBD814A1C7D07DE003AF2C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShopME/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.ShopME;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCBD814B1C7D07DE003AF2C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShopME/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.ShopME;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCBD812F1C7D07DE003AF2C4 /* Build configuration list for PBXProject "ShopME" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBD81471C7D07DE003AF2C4 /* Debug */,
+				BCBD81481C7D07DE003AF2C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCBD81491C7D07DE003AF2C4 /* Build configuration list for PBXNativeTarget "ShopME" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBD814A1C7D07DE003AF2C4 /* Debug */,
+				BCBD814B1C7D07DE003AF2C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BCBD813E1C7D07DE003AF2C4 /* ShopME.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BCBD813F1C7D07DE003AF2C4 /* ShopME.xcdatamodel */,
+			);
+			currentVersion = BCBD813F1C7D07DE003AF2C4 /* ShopME.xcdatamodel */;
+			path = ShopME.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BCBD812C1C7D07DE003AF2C4 /* Project object */;
+}
