@@ -19,14 +19,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //array of images for each cell
         imageArray = [UIImage(named: "category-1-recent")!, UIImage(named: "category-2-cart")!, UIImage(named: "category-3-grocery")!, UIImage(named: "category-4-clothing")!, UIImage(named: "category-5-movies")!, UIImage(named: "category-6-garden")!, UIImage(named: "category-7-electronics")!, UIImage(named: "category-8-books")!, UIImage(named: "category-9-appliances")!, UIImage(named: "category-10-toys")!]
         
+        //array of title strings for each cell
         titleArray = ["Recent Orders", "Cart", "Grocery", "Clothing", "Movies", "Garden", "Electronics", "Books", "Appliances", "Toys"]
        
+        //sets text of the back bar button in the navigation controller
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "ShopME", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
-
-        // Do any additional setup after loading the view, typically from a nib.
-       
         
     }
     
@@ -36,11 +36,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
     
+    //gets number of items to create cells for in the collection view
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
     
-    // 2
+    //adds a cell to the collectionview for each item
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CategoryCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CategoryCell
         cell.label.text = titleArray[indexPath.row]
@@ -48,6 +49,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
+    // used to pass the title of the category to the category page from the home view controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        
         if (segue.identifier == "toCategoryPageSegue") {
@@ -62,16 +64,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
     }
-    // 3
+    
+    //handles the selection of the cell and based on the cell tag, sets the categoryStr to be the category on the next page
+    //this string will be used in the categoryViewController, to decide what category of items to display
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let selection = indexPath.row
         
         
         switch selection {
         case 0:
-            print("go to recent items")
+            performSegueWithIdentifier("toRecentOrdersSegue", sender: nil)
         case 1:
-            //print("go to the cart")
             performSegueWithIdentifier("toCartSegue", sender: nil)
         case 2:
             categoryToPass = "Grocery"
@@ -102,6 +105,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             break
             
         }
+    }
+    
+    //used for the segue to home from the cart page
+    @IBAction func unwindToHome(segue: UIStoryboardSegue){
+    
     }
     
 }

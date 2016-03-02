@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+// class used to hold a category's objects
 class CategoryItem{
     
     var title:String

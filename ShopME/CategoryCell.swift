@@ -8,9 +8,9 @@
 
 import UIKit
 
+// custom collectionview cell used in Home page
 class CategoryCell: UICollectionViewCell {
     
-   
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     

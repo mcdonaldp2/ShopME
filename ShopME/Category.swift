@@ -14,6 +14,8 @@ class Category {
     var title: String
     var itemArray = [CategoryItem]()
     
+    //initializer
+    //based on title, sets the itemArray equal to arrays of CategoryItems corresponding to that title
     init(title: String){
         self.title = title
         
@@ -30,8 +32,6 @@ class Category {
                 CategoryItem(title: "Bread", imageTitle: "grocery-7-bread", description: "Fluffy golden buns", price: 4.00),
                 CategoryItem(title: "Eggs", imageTitle: "grocery-8-eggs", description: "Unborn Chicken Babies", price: 5.00)
                 ]
-            
-            //self.imageTitleArray = ["grocery-1-tomatoes", "grocery-2-bananas", "grocery-3-gala", "grocery-4-lettuce", "grocery-5-broccoli", "grocery-6-milk", "grocery-7-bread", "grocery-8-eggs"]
         case "Garden":
             self.itemArray = [
                 CategoryItem(title: "Shovel", imageTitle: "garden-1-shovel", description: "dig stuff with it!", price: 35.00),
@@ -41,7 +41,6 @@ class Category {
                 CategoryItem(title: "Fruit Tree", imageTitle: "garden-5-fruit-tree", description: "A tree that grows fruit", price: 23.75),
                 CategoryItem(title: "Leaves Rake", imageTitle: "garden-6-leaves-rake", description: "Clear your lawn of those pesky leaves!", price: 44.85)
             ]
-            //self.imageTitleArray = ["garden-1-shovel", "garden-2-tomato-plant", "garden-3-mower", "garden-4-garden-soil", "garden-5-fruit-tree", "garden-6-leaves-rake"]
         case "Movies":
             self.itemArray = [
             CategoryItem(title: "Shawshank Redemption", imageTitle: "movies-1-shawshank", description: "A movie about prison and Morgan Freeman", price: 18.00),
@@ -90,13 +89,13 @@ class Category {
             CategoryItem(title: "Hot Wheels Car", imageTitle: "toys-4-hot-wheels-car", description: "plastic toy car", price: 3.50),
             CategoryItem(title: "SuperMan Action Figure", imageTitle: "toys-5-superman-action-figure", description: "a plastic superman doll", price: 5.00)
             ]
-            //self.imageTitleArray = ["movies-1-shawshank", "movies-2-lord-of-the-rings", "movies-3-godfather"]
         default:
             break
             
         }
     }
     
+    //returns the Category's item array
     func getItemArray() -> [CategoryItem]{
         return self.itemArray
     }
