@@ -413,10 +413,5 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return nil
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 }
