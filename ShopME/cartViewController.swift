@@ -57,17 +57,12 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 cell.quantityLabel.text = String(Int(cell.quantityLabel.text!)! + 1)
                 cell.priceLabel.text = String(cell.itemPrice * Double(cell.quantityLabel.text!)!)
                 
-                totalPrice = totalPrice + cell.itemPrice
-                totalQuantity = totalQuantity + 1
-                
-                totalPriceLabel.text =  "$" + String(totalPrice)
-                totalQuantityLabel.text = String(totalQuantity)
-                
                 
                 getFetchRequestAndUpdate(cell.titleLabel.text!, price: Double(cell.priceLabel.text!)!, category: determineCategory(cell.tag), quantity: Int(cell.quantityLabel.text!)!)
                 
             }
         }
+        updateTotalQuantityAndPrice()
         
     }
     
@@ -81,11 +76,6 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     cell.quantityLabel.text = String(Int(cell.quantityLabel.text!)! - 1)
                     cell.priceLabel.text = String(cell.itemPrice * Double(cell.quantityLabel.text!)!)
                     
-                    totalPrice = totalPrice - cell.itemPrice
-                    totalQuantity = totalQuantity - 1
-                    
-                    totalPriceLabel.text =  "$" + String(totalPrice)
-                    totalQuantityLabel.text = String(totalQuantity)
                     
                     getFetchRequestAndUpdate(cell.titleLabel.text!, price: Double(cell.priceLabel.text!)!, category: determineCategory(cell.tag), quantity: Int(cell.quantityLabel.text!)!)
                     if (Double(cell.quantityLabel.text!)! == 0) {
@@ -99,6 +89,7 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
             }
         }
+        updateTotalQuantityAndPrice()
     }
     
     //deletes all objects in the Items entity in coredata, and tableview is reloaded if the total quantity is greater than 0
@@ -141,6 +132,7 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.presentViewController(alertController, animated: true, completion: nil)
             
         }
+        updateTotalQuantityAndPrice()
     }
     
     // deletes all data from a given entity
@@ -219,6 +211,7 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Present the controller
         self.presentViewController(alertController, animated: true, completion: nil)
         }
+        updateTotalQuantityAndPrice()
     }
     
     //everytime view loads, fetchedResultsController performs fetch,
@@ -230,15 +223,13 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         do {
             try fetchedResultsController.performFetch()
+            cartTableView.reloadData()
         } catch {
             print("An error occurred")
         }
         
-        totalPrice = 0
-        totalQuantity = 0
         
-        totalPriceLabel.text = "$" + String(0)
-        totalQuantityLabel.text = String(0)
+        updateTotalQuantityAndPrice()
         
         var image = UIImage(named: "homeButton")
         
@@ -318,9 +309,9 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             return "Electronics"
         case 5:
             return "Books"
-        case 7:
+        case 6:
             return "Appliances"
-        case 8:
+        case 7:
             return "Toys"
         default:
             return "Something is Wrong"
@@ -368,10 +359,8 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         cell.priceLabel.text = formatter.stringFromNumber(Double(item.price!) * Double(item.quantity!))
-        totalPrice = totalPrice + Double(cell.priceLabel.text!)!
         
         cell.quantityLabel.text = String(item.quantity!)
-        totalQuantity = totalQuantity + Int(item.quantity!)
         
         cell.setItemPrice(Double(item.price!))
         
@@ -398,9 +387,6 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             break
         }
         
-        totalPriceLabel.text =  "$" + String(totalPrice)
-        totalQuantityLabel.text = String(totalQuantity)
-        
         return cell
     }
     
@@ -412,6 +398,34 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         return nil
+    }
+    
+    
+    //updates the total quantity and price form core data
+    func updateTotalQuantityAndPrice() {
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "Items")
+        
+        totalPrice = 0
+        totalQuantity = 0
+        
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest) as! [Items]
+            for var i = 0; i < results.count; i++ {
+                totalPrice = (Double(results[i].price!) * Double(results[i].quantity!)) + totalPrice
+                totalQuantity =  totalQuantity + Int(results[i].quantity!)
+            }
+        } catch {
+            print("error")
+        }
+        
+        totalQuantityLabel.text = String(totalQuantity)
+        totalPriceLabel.text = "$" + String(totalPrice)
+
     }
 
 }

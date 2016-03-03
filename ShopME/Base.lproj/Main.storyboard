@@ -348,8 +348,6 @@
         <!--Your Cart-->
         <scene sceneID="MYc-aJ-V9X">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y0c-Sq-DD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Ol6-bR-siZ" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="jNe-Gt-Hh0" customClass="cartViewController" customModule="ShopME" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WbQ-U9-B8e"/>
@@ -397,7 +395,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalPrice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d2-ZI-8E0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d2-ZI-8E0">
                                         <rect key="frame" x="388" y="15" width="106" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="106" id="Xjo-HJ-5Qh"/>
@@ -406,7 +404,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalQuantity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-ED-lJI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-ED-lJI">
                                         <rect key="frame" x="494" y="15" width="106" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -454,7 +452,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-PL-sFW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-PL-sFW">
                                                     <rect key="frame" x="390" y="0.0" width="63" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="63" id="d1w-em-zch"/>
@@ -619,6 +617,8 @@
                         <segue destination="Ol6-bR-siZ" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="3Aj-tC-GSo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0c-Sq-DD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ol6-bR-siZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2039" y="680"/>
         </scene>

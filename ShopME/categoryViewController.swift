@@ -117,9 +117,9 @@ class categoryViewController: UIViewController, UITableViewDelegate, UITableView
             return "Electronics"
         case 5:
             return "Books"
-        case 7:
+        case 6:
             return "Appliances"
-        case 8:
+        case 7:
             return "Toys"
         default:
             return "Something is Wrong"
