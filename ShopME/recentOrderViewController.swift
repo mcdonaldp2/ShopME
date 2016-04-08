@@ -63,7 +63,13 @@ class recentOrderViewController: UIViewController, UITableViewDataSource, UITabl
         
         let order = fetchedResultsController.objectAtIndexPath(indexPath) as! RecentOrders
         
-        cell.itemAndPriceLabel.text = String(order.quantity!) + " items ($" + String(order.price!) + ")"
+        
+        let priceFormatter = NSNumberFormatter()
+        priceFormatter.minimumFractionDigits = 2
+        priceFormatter.maximumFractionDigits = 2
+        priceFormatter.minimumIntegerDigits = 1
+        
+        cell.itemAndPriceLabel.text = String(order.quantity!) + " items ($" + priceFormatter.stringFromNumber(order.price!)! + ")"
         
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.FullStyle

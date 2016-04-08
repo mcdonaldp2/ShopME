@@ -55,8 +55,16 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let superview = button.superview {
             if let cell = superview.superview as? cartTableCell{
                 cell.quantityLabel.text = String(Int(cell.quantityLabel.text!)! + 1)
+                
                 cell.priceLabel.text = String(cell.itemPrice * Double(cell.quantityLabel.text!)!)
                 
+                let formatter = NSNumberFormatter()
+                formatter.minimumFractionDigits = 2
+                formatter.maximumFractionDigits = 2
+                formatter.minimumIntegerDigits = 1
+                
+                cell.priceLabel.text = formatter.stringFromNumber(Double(cell.priceLabel.text!)!)
+            
                 
                 getFetchRequestAndUpdate(cell.titleLabel.text!, price: Double(cell.priceLabel.text!)!, category: determineCategory(cell.tag), quantity: Int(cell.quantityLabel.text!)!)
                 
@@ -76,6 +84,12 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     cell.quantityLabel.text = String(Int(cell.quantityLabel.text!)! - 1)
                     cell.priceLabel.text = String(cell.itemPrice * Double(cell.quantityLabel.text!)!)
                     
+                    let formatter = NSNumberFormatter()
+                    formatter.minimumFractionDigits = 2
+                    formatter.maximumFractionDigits = 2
+                    formatter.minimumIntegerDigits = 1
+                    
+                    cell.priceLabel.text = formatter.stringFromNumber(Double(cell.priceLabel.text!)!)
                     
                     getFetchRequestAndUpdate(cell.titleLabel.text!, price: Double(cell.priceLabel.text!)!, category: determineCategory(cell.tag), quantity: Int(cell.quantityLabel.text!)!)
                     if (Double(cell.quantityLabel.text!)! == 0) {
@@ -424,7 +438,14 @@ class cartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         totalQuantityLabel.text = String(totalQuantity)
-        totalPriceLabel.text = "$" + String(totalPrice)
+        
+        
+        let formatter = NSNumberFormatter()
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.minimumIntegerDigits = 1
+        
+        totalPriceLabel.text = "$" + formatter.stringFromNumber(totalPrice)!
 
     }
 
